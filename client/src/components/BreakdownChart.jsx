@@ -15,16 +15,11 @@ const BreakdownChart = ({ isDashboard = false }) => {
 		theme.palette.secondary[300],
 		theme.palette.secondary[500],
 	];
-	const categoryList = [
-		'GeneralDrug',
-		'CancerDrug',
-		'CardiacDrug',
-		'NeuroDrug',
-	];
+
 	const formattedData = Object.entries(data.salesByCategory).map(
 		([category, sales], i) => ({
-			id: categoryList[i % 4],
-			label: categoryList[i % 4],
+			id: category,
+			label: category,
 			value: sales,
 			color: colors[i],
 		})

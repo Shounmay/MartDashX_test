@@ -28,7 +28,10 @@ function App() {
 					<CssBaseline />
 					<Routes>
 						<Route element={<Layout />}>
-							<Route path='/' element={<Navigate to='/dashboard' replace />} />
+							<Route
+								path='/'
+								element={<Navigate to='/userrecommendations' replace />}
+							/>
 							<Route
 								path='/userrecommendations'
 								element={<Recommendations />}
